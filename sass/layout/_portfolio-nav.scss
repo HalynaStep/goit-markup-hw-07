@@ -1,0 +1,34 @@
+.portfolio-nav-list {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+.portfolio-nav-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.portfolio-nav-btn {
+  padding: 6px 22px;
+
+  background-color: #f5f4fa;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  color: var(--second-btn-color);
+  border: 1px transparent;
+  border-radius: 4px;
+
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-nav-btn:hover,
+.portfolio-nav-btn:focus {
+  background-color: var(--main-btn-background-color);
+  color: var(--main-btn-color);
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
