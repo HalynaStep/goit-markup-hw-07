@@ -17,16 +17,9 @@
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.portfolio-link:hover,
-.portfolio-link:focus {
-  box-shadow: 0px 4px 4px 0px #00000040;
-}
-.portfolio-link:hover,
-.portfolio-link:focus {
-  .portfolio-description-wrap,
-  .portfolio-description-wrap {
-    transform: translateY(0);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px 0px #00000040;
   }
 }
 
@@ -52,6 +45,11 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   padding: 63px 24px;
+
+  .portfolio-link:hover &,
+  .portfolio-link:focus & {
+    transform: translateY(0);
+  }
 }
 
 .portfolio-title {

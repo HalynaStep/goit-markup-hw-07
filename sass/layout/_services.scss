@@ -6,12 +6,11 @@
   display: flex;
 }
 
-.services-item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .services-item {
   position: relative;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .services-description {
