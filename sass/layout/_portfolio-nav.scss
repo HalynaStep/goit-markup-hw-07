@@ -13,17 +13,13 @@
 
   background-color: #f5f4fa;
   font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  letter-spacing: 0.03em;
+  @include font($fz: 16px, $fw: 500, $lh: 1.62, $ls: 0.03em);
   color: var(--second-btn-color);
   border: 1px transparent;
   border-radius: 4px;
 
   transition-property: color, background-color, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %animation-style;
 
   &:hover,
   &:focus {

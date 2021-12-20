@@ -23,8 +23,7 @@
   border-radius: 4px;
 
   transition-property: color, border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %animation-style;
   &:hover,
   &:focus {
     color: var(--accent-text-color);

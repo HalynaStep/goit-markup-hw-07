@@ -15,8 +15,7 @@
   display: block;
 
   transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %animation-style;
   &:hover,
   &:focus {
     box-shadow: 0px 4px 4px 0px #00000040;
@@ -41,8 +40,7 @@
   height: 100%;
   transform: translateY(100%);
   transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %animation-style;
 
   padding: 63px 24px;
 
@@ -70,8 +68,6 @@
 }
 
 .portfolio-description {
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.03em;
+  @include font($fz: 16px, $fw: 500, $lh: 1.87, $ls: 0.03em);
   color: var(--main-text-color);
 }

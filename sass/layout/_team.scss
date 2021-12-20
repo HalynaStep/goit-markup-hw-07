@@ -2,10 +2,7 @@
   background-color: var(--second-section-background-color);
 }
 .team-title {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
+  @include font($fz: 16px, $fw: 500, $lh: 1.19, $ls: 0.03em);
   text-align: center;
   color: var(--main-title-color);
   margin-bottom: 10px;
@@ -31,9 +28,7 @@
   background-color: #ffffff;
 }
 .team-name {
-  font-size: 16px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
+  @include font($fz: 16px, $fw: 500, $lh: 1.19, $ls: 0.03em);
   text-align: center;
   margin-bottom: 16px;
 }
@@ -61,8 +56,7 @@
   border-radius: 50%;
   color: #afb1b8;
   transition-property: color, background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %animation-style;
 
   &:hover,
   &:focus {

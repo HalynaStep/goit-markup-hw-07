@@ -20,18 +20,13 @@
   margin-bottom: 20px;
 
   font-family: Raleway;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
+  @include font($fz: 26px, $fw: 700, $lh: 1.19, $ls: 0.03em);
   color: var(--second-text-color);
 }
 
 .address-link {
-  font-size: 14px;
+  @include font($fz: 14px, $fw: 500, $lh: 1.71, $ls: 0.03em);
   font-style: normal;
-  line-height: 1.71px;
-  letter-spacing: 0.03em;
   color: var(--second-text-color);
 }
 
@@ -41,14 +36,11 @@
 
 .mail-link,
 .tel-link {
+  @include font($fz: 14px, $fw: 500, $lh: 1.71, $ls: 0.03em);
   font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %animation-style;
   &:hover,
   &:focus {
     color: var(--second-text-color);
@@ -61,11 +53,7 @@
 .footer-social-title {
   margin-bottom: 20px;
 
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
+  @include font($fz: 14px, $fw: 700, $lh: 1.14, $ls: 0.03em);
   text-transform: uppercase;
   color: var(--accent-title-color);
 }
@@ -94,8 +82,7 @@
   color: var(--second-text-color);
 
   transition-property: color, background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %animation-style;
 
   &:hover,
   &:focus {
@@ -124,10 +111,7 @@
 
 .footer-form-title {
   display: block;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
+  @include font($fz: 14px, $fw: 700, $lh: 1.14, $ls: 0.03em);
   text-transform: uppercase;
   color: var(--accent-title-color);
 }
@@ -143,14 +127,11 @@
 
   background-color: var(--accent-section-background-color);
   color: var(--second-text-color);
-  font-size: 16px;
-  line-height: 1.25;
+  @include font($fz: 16px, $fw: 500, $lh: 1.25, $ls: 0.03em);
   border: 1px solid #ffffff4d;
   border-radius: 4px;
   &::placeholder {
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
+    @include font($fz: 16px, $fw: 500, $lh: 1.25, $ls: 0.03em);
     color: rgba(255, 255, 255, 0.6);
   }
 }
@@ -167,10 +148,7 @@
 
   background-color: var(--main-btn-background-color);
   font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
+  @include font($fz: 16px, $fw: 700, $lh: 1.87, $ls: 0.06em);
   color: var(--main-btn-color);
   border-radius: 4px;
   border: 1px solid transparent;
