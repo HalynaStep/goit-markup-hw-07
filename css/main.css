@@ -1078,7 +1078,7 @@ button {
   top: 0;
   left: 0;
   height: 100%;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition-property: transform;
   padding: 63px 24px;
 }
