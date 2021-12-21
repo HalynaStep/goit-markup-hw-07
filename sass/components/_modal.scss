@@ -23,7 +23,7 @@
   transform: translate(-50%, -50%);
 }
 
-.modal-title {
+.modal-form__title {
   display: block;
   margin-bottom: 12px;
 
@@ -32,7 +32,7 @@
   color: var(--main-title-color);
 }
 
-.modal-close {
+.close {
   width: 30px;
   height: 30px;
   background-color: transparent;
@@ -55,26 +55,28 @@
   }
 }
 
-.modal-close-icon {
+.close__icon {
   transition-property: fill;
   @extend %animation-style;
 }
 
-.modal-form-fiel:not(:last-child) {
-  margin-bottom: 10px;
+.modal-form__box {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
-.modal-form-text {
+.modal-form__text {
   @include font($fz: 12px, $fw: 500, $lh: 1.17, $ls: 0.01em);
   color: var(--main-text-color);
 }
 
-.input-wrap {
+.input__wrap {
   display: flex;
   position: relative;
   margin-top: 4px;
 }
-.modal-form-input {
+.modal-form__input {
   outline: none;
   padding-left: 42px;
   padding-right: 15px;
@@ -93,11 +95,7 @@
   }
 }
 
-.modal-form-input:focus + .modal-form-icon {
-  fill: var(--accent-text-color);
-}
-
-.modal-form-icon {
+.modal-form__icon {
   width: 18px;
   height: 18px;
   position: absolute;
@@ -109,7 +107,11 @@
   @extend %animation-style;
 }
 
-.modal-form-comment {
+.modal-form__input:focus + .modal-form__icon {
+  fill: var(--accent-text-color);
+}
+
+.modal-form__comment {
   display: block;
   width: 100%;
   min-height: 120px;
@@ -133,17 +135,20 @@
   }
 }
 
-.modal-license-field {
+.license__box {
   margin-top: 20px;
   margin-bottom: 30px;
 }
 
-.modal-form-license {
+.license {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include font($fz: 14px, $fw: 500, $lh: 1.71, $ls: 0.03em);
+  color: var(--main-text-color);
 }
-.checkbox-item {
+.checkbox__item {
   width: 16px;
   height: 15px;
   border: 2px solid #000000;
@@ -158,18 +163,13 @@
   @extend %animation-style;
 }
 
-.modal-form-license {
-  @include font($fz: 14px, $fw: 500, $lh: 1.71, $ls: 0.03em);
-  color: var(--main-text-color);
-}
-
-.license-link {
+.license__link {
   margin-left: 5px;
   @include font($fz: 14px, $fw: 500, $lh: 1.71, $ls: 0.03em);
   color: var(--accent-text-color);
 }
 
-.license-icon {
+.license__icon {
   fill: var(--main-btn-color);
   width: 11px;
   height: 8px;
@@ -177,8 +177,8 @@
   justify-content: center;
 }
 
-.checkbox-input:checked + .modal-form-license {
-  .checkbox-item {
+.checkbox__input:checked + .license {
+  .checkbox__item {
     background-color: var(--main-btn-background-color);
     border: none;
   }
@@ -188,4 +188,8 @@
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+
+.modal__button {
+  margin: 0 auto;
 }

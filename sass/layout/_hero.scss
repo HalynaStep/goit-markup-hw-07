@@ -14,10 +14,14 @@
   background-size: cover;
 }
 
-.hero-title {
+.hero__title {
   margin-bottom: 30px;
 
   @include font($fz: 44px, $fw: 900, $lh: 1.36, $ls: 0.06em);
   text-transform: uppercase;
   color: var(--accent-title-color);
+}
+
+.hero__button {
+  margin: 0 auto;
 }

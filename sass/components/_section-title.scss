@@ -1,9 +1,0 @@
-.services-section-title,
-.team-section-title,
-.clients-title {
-  margin-bottom: 50px;
-
-  @include font($fz: 36px, $fw: 700, $lh: 1.17, $ls: 0.03em);
-  text-align: center;
-  color: var(--main-title-color);
-}

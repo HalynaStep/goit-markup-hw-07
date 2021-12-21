@@ -1,14 +1,16 @@
-.portfolio-nav-list {
+.filter {
   display: flex;
   margin-bottom: 50px;
   justify-content: center;
 }
 
-.portfolio-nav-item:not(:last-child) {
-  margin-right: 8px;
+.filter__item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
 }
 
-.portfolio-nav-btn {
+.filter__btn {
   padding: 6px 22px;
 
   background-color: #f5f4fa;
